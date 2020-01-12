@@ -34,14 +34,10 @@ class Forecast implements ForecastContract
     public function getWeeks(string $city): array
     {
         return $this->cache->remember(Str::slug($city), 720, function () use ($city) {
-//            $geoInfo = Geocoder::getCoordinatesForAddress($city);
-//
-//            $latitude = Arr::get($geoInfo, 'lat');
-//            $longitude = Arr::get($geoInfo, 'lng');
+            $geoInfo = Geocoder::getCoordinatesForAddress($city);
 
-            $latitude = '53.025780';
-            $longitude = '-2.177390';
-
+            $latitude = Arr::get($geoInfo, 'lat');
+            $longitude = Arr::get($geoInfo, 'lng');
 
             /** @var \App\Services\Contracts\DarkSky $forecast */
             $forecast = app(DarkSkyContract::class)
