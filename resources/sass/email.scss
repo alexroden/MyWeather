@@ -1,0 +1,167 @@
+// Fonts
+@import '~@fortawesome/fontawesome-free/scss/brands';
+@import '~@fortawesome/fontawesome-free/scss/regular';
+@import '~@fortawesome/fontawesome-free/scss/solid';
+@import '~@fortawesome/fontawesome-free/scss/fontawesome';
+@import url(https://fonts.googleapis.com/css?family=Roboto);
+
+// Abstracts
+@import "abstracts/variables";
+
+// Bulma
+@import './node_modules/bulma/bulma.sass';
+
+body {
+    width: 100% !important;
+    height: 100%;
+    margin: 0;
+    line-height: 1.4;
+    -webkit-text-size-adjust: none;
+    background-color: white;
+}
+
+/* Layout ------------------------------ */
+.email-wrapper {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+.email-content {
+    //margin: 0 auto;
+    width: 100%;
+    padding: 0;
+}
+
+/* Masthead ----------------------- */
+.email-masthead {
+    padding: 5px 0 5px;
+    text-align: center;
+}
+.email-masthead_logo {
+    max-width: 400px;
+    border: 0;
+}
+.email-masthead_name {
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+}
+
+/* Body ------------------------------ */
+.email-body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    border-top: 1px solid #EDEFF2;
+    border-bottom: 1px solid #EDEFF2;
+    background-color: #FFF;
+    color: white;
+}
+.email-body_inner {
+    width: 100%;
+    margin: 1rem auto;
+    padding: 0;
+}
+.email-footer {
+    width: 570px;
+    margin: 0 auto;
+    padding: 0;
+    text-align: center;
+}
+.email-footer p {
+    color: #AEAEAE;
+}
+.body-action {
+    width: 100%;
+    margin: 30px auto;
+    padding: 0;
+    text-align: center;
+}
+.body-sub {
+    margin-top: 25px;
+    padding-top: 25px;
+    border-top: 1px solid #EDEFF2;
+}
+.content-cell {
+    padding: 2rem;
+    text-align: center;
+}
+.align-right {
+    text-align: right;
+}
+tbody {
+    vertical-align: top;
+}
+
+/* Type ------------------------------ */
+h1 {
+    margin-top: 0;
+    font-size: 16px;
+    font-weight: bold;
+    padding-bottom: 0;
+}
+h2 {
+    margin-top: 0;
+    font-size: 15px;
+    font-weight: bold;
+}
+h3 {
+    margin-top: 0;
+    font-size: 13px;
+    font-weight: bold;
+    padding: 0;
+}
+p {
+    margin-top: 0;
+    font-size: 12px;
+    line-height: 1.5em;
+    margin-bottom: 5px;
+}
+p.sub {
+    font-size: 10px;
+}
+p.center {
+    text-align: center;
+    padding: 0;
+    margin: 0;
+}
+li {
+    font-size: 12px;
+}
+
+/* Buttons ------------------------------ */
+.button {
+    border-style: solid;
+    border-width: 10px 40px;
+    border-color: #209cee;
+    background-color: white;
+    border-radius: 3px;
+    color: $white;
+    line-height: 25px;
+    text-align: center;
+    text-decoration: none;
+    -webkit-text-size-adjust: none;
+}
+
+.button:hover {
+    color: $white;
+}
+/*Extras ------------------------------------- */
+.no-padding {
+    padding: 0 !important;
+}
+.no-border-bottom {
+    border-bottom: none;
+}
+/*Media Queries ------------------------------ */
+@media only screen and (max-width: 600px) {
+    .email-body_inner,
+    .email-footer {
+        width: 100% !important;
+    }
+    .button {
+        width: 100% !important;
+        margin-top: 5px;
+    }
+}
