@@ -9,16 +9,6 @@ use Illuminate\Support\Arr;
 class DarkSky implements DarkSkyContract
 {
     /**
-     * @var int
-     */
-    const TODAY = 0;
-
-    /**
-     * @var int
-     */
-    const TOMORROW = 1;
-
-    /**
      * @var string
      */
     const URL = 'https://api.darksky.net/forecast/';
